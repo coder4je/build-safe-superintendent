@@ -18,5 +18,6 @@ and More
 
 To learn more about our services or to request a consultation, please visit our website or contact us via email or phone.
 
-Email: info@bscs.com
-Phone: (917) 775-4421
+Website: www.buildsafesuperintendent.com
+Email: info@buildsafesuperintendent.com
+Phone: (917) 750-4421
