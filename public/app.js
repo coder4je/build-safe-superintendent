@@ -66,27 +66,40 @@ phoneInput.addEventListener("input", function (event) {
   event.target.value = formattedInput;
 });
 
-// Modal
+// Service Details
 
-// Get the modal
-var modal = document.getElementById("myModal");
+function showDetails(serviceId) {
+  const details = document.getElementById(`${serviceId}-details`);
+  const closeBtn = document.querySelector(".close-btn");
+  closeBtn.addEventListener("click", () => {
+    details.style.maxHeight = null;
+  });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-function openModal() {
-  modal.style.display = "block";
+  if (details.style.maxHeight) {
+    details.style.maxHeight = null;
+  } else {
+    details.style.maxHeight = `${details.scrollHeight}px`;
+  }
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+// Get the modal and the link that opens it
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+const modalButtons = document.querySelectorAll(".modal-button");
+modalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("id") + "-modal";
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+
+    const closeButton = modal.querySelector(".close");
+    closeButton.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});

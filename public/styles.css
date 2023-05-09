@@ -71,34 +71,6 @@ html {
   height: 100%;
 }
 
-/* .navbar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  width: 100%;
-} */
-
-/* .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 20px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background: #4837ff;
-  color: #fff;
-}
-
-.button:hover {
-  background: #4837ff;
-  transition: all 0.3s ease;
-} */
-
 .navbar__links:hover {
   color: #4837ff;
   transition: all 0.3s ease;
@@ -195,9 +167,9 @@ html {
 
 .main__content {
   text-align: center;
-  margin: 0 auto;
+  margin-top: 10rem;
   background-color: #141414;
-  height: 80vh;
+  height: 60vh;
   /* flex-wrap: wrap; */
 }
 
@@ -233,6 +205,7 @@ html {
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .main__content {
+    margin-top: 0;
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -258,7 +231,10 @@ html {
 }
 
 @media screen and (max-width: 480px) {
+  .main_container {
+  }
   .main__content {
+    margin-top: 0;
     margin-bottom: 2rem;
     flex-wrap: wrap;
   }
@@ -277,13 +253,13 @@ html {
   }
 }
 
-/* Services Session CSS */
+/* Services Session */
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100%;
-  margin-top: 5rem;
 }
 
 .services h1 {
@@ -306,19 +282,13 @@ html {
   -moz-text-fill-color: transparent;
 }
 
-.services__container {
+.services__card {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 80%;
-}
-
-.services__card {
-  width: 80%;
-  max-width: 500px;
-  height: 80%;
-  margin: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -329,16 +299,16 @@ html {
 }
 
 .services img {
-  width: 100%;
+  width: 500px;
   border: #131313;
   border-radius: 10px;
 }
 
 .services h2 {
   width: 30%;
-  color: #131313;
+  color: #fff;
   background-color: transparent;
-  text-shadow: 2px 2px 4px #fff;
+  text-shadow: 2px 2px 4px #131313;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -346,9 +316,9 @@ html {
 
 .services__card p {
   width: 30%;
-  color: #131313;
+  color: #fff;
   background-color: transparent;
-  text-shadow: 2px 2px 4px #fff;
+  text-shadow: 2px 2px 4px #131313;
   position: absolute;
   top: 100px;
   left: 30px;
@@ -381,8 +351,8 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  .services__container {
-    margin-top: 5rem;
+  .services img {
+    margin: auto;
   }
 
   .services h1 {
@@ -397,12 +367,8 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-  .services__container {
-    height: 60vh;
-  }
-
   .services__card {
-    width: 300px;
+    width: 80%;
   }
 
   .services h1 {
@@ -416,10 +382,154 @@ html {
   .services p {
     font-size: 1rem;
   }
+
+  .services img {
+    width: 90%;
+  }
+}
+/* Service Details  */
+.details {
+  color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.details.show {
+  max-width: 800px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card {
+  background-color: #1e1f24;
+  width: 45rem;
+  height: 200px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3a3c46;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.card h3 {
+  background-color: #1e1f24;
+  margin: 20px 10px;
+}
+
+.card p {
+  margin: 0 10px;
+  background-color: #1e1f24;
+}
+
+.card a {
+  color: #fff;
+  margin: 20px 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #4837ff;
+  position: absolute;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.close-btn {
+  color: #fff;
+  background: #4837ff;
+  padding: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 18rem;
+    height: 300px;
+  }
+}
+
+#card-one {
+  animation: card-1 0.5s ease forwards;
+}
+
+#card-two {
+  animation: card-2 0.5s ease forwards;
+}
+
+#card-three {
+  animation: card-3 0.5s ease forwards;
+}
+
+#card-four {
+  animation: card-4 0.5s ease forwards;
+}
+
+@keyframes card-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-4 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* footer CSS */
-/* .footer__container {
+.footer__container {
   background-color: #141414;
   padding: 5rem 0;
   display: flex;
@@ -427,8 +537,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
-
 
 .footer_links {
   width: 100%;
@@ -469,7 +577,6 @@ html {
   color: #e9e9e9;
   transition: 0.3s ease-out;
 }
-*/
 
 #footer__logo {
   color: #fff;
@@ -645,41 +752,50 @@ html {
   }
 }
 
-/* Modal */
+/* Modal styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  top: 80px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  color: #fff;
+}
+
+.modal-content h3 {
+  display: flex;
+  color: white;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.modal-content p,
+ul,
+li {
+  color: white;
+  margin: 1rem;
 }
 
 .close {
-  color: #aaa;
+  color: #aaaaaa;
+  float: right;
   font-size: 28px;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-  color: #ff8177;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
