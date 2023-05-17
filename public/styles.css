@@ -26,10 +26,9 @@ html {
   justify-content: space-between;
   height: 80px;
   z-index: 1;
-  width: 100%;
-  /* max-width: 1300px; */
   margin: 0 auto;
   padding: 0 50px;
+  width: 100%;
 }
 
 #navbar__logo {
@@ -76,14 +75,13 @@ html {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
     width: 100%;
-    /* max-width: 1300px; */
     padding: 0;
   }
 
@@ -408,7 +406,7 @@ html {
   height: 100%;
 }
 
-.card {
+.cards-container div {
   background-color: #1e1f24;
   width: 45rem;
   height: 200px;
@@ -422,17 +420,17 @@ html {
   transition: all 0.5s ease;
 }
 
-.card h3 {
+.cards-container h3 {
   background-color: #1e1f24;
   margin: 20px 10px;
 }
 
-.card p {
+.cards-container p {
   margin: 0 10px;
   background-color: #1e1f24;
 }
 
-.card a {
+.cards-container a {
   color: #fff;
   margin: 20px 10px;
   padding: 5px;
@@ -456,31 +454,31 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  .card {
+  .cards-container div {
     width: 35rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .card {
+  .cards-container div {
     width: 18rem;
     height: 300px;
   }
 }
 
-#card-one {
+.card-one {
   animation: card-1 0.5s ease forwards;
 }
 
-#card-two {
+.card-two {
   animation: card-2 0.5s ease forwards;
 }
 
-#card-three {
+.card-three {
   animation: card-3 0.5s ease forwards;
 }
 
-#card-four {
+.card-four {
   animation: card-4 0.5s ease forwards;
 }
 
@@ -540,7 +538,6 @@ html {
 
 .footer_links {
   width: 100%;
-  max-width: 1000px;
   display: flex;
   justify-content: center;
 }
@@ -590,7 +587,7 @@ html {
   color: #fff;
   font-size: 24px;
 } */
-
+/* 
 .social__media {
   width: 100%;
   margin-top: 5rem;
@@ -601,7 +598,7 @@ html {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-}
+} */
 /* 
 .social__icons {
   display: flex;
