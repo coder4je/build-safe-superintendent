@@ -1,9 +1,12 @@
 {
-  "extends": ["development"],
+  "extends": [
+    "development"
+  ],
   "hints": {
     "detect-css-reflows/paint": "off",
     "detect-css-reflows/composite": "off",
     "detect-css-reflows/layout": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "highest-available-document-mode": "off"
   }
 }
