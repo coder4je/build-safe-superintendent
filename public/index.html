@@ -35,148 +35,106 @@
     emailjs.init('u0yN2UGu-s7bjaR6M')
   </script>
   <script defer src="app.js"></script>
-  <script type="text/javascript" id="hs-script-loader" async defer
-    src="https://js-na1.hs-scripts.com/40099489.js"></script>
-
+  <!-- <script type="text/javascript" id="hs-script-loader" async defer
+    src="https://js-na1.hs-scripts.com/40099489.js"></script> -->
 </head>
 
 <body>
   <nav role="navigation" class="navbar">
-    <div class="navbar__container">
-      <a href="./" id="navbar__logo">BuildSafe</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="#services" class="navbar__links">
-            Service
-          </a>
-        </li>
-        <li class="navbar__item">
-          <a href="#contact" class="navbar__links">
-            Contact Us
-          </a>
-        </li>
-      </ul>
-    </div>
+    <a href="./" id="navbar__logo">BuildSafe</a>
+    <a href="#contact" class="navbar__links">
+      Contact Us
+    </a>
   </nav>
 
   <!-- Hero Section -->
-  <div class="main" id="home">
-    <div class="main__content">
-      <h1>CONSTRUCTION SUPERINTENDENT</h1>
-      <h2>STAFFING & CONSULTING</h2>
-      <p>Trust us to keep your construction sites safe and compliant</p>
-    </div>
+  <div class="main__content">
+    <h1>CONSTRUCTION SUPERINTENDENT</h1>
+    <h2>STAFFING & CONSULTING</h2>
+    <p>Trust us to keep your construction sites safe and compliant</p>
   </div>
 
   <!-- Services Section -->
   <div class="services" id="services">
-    <h1>SEE WHAT WE OFFER</h1>
-    <div class="services__container">
-      <div class="services__card">
-        <h2>STAFFING EXPERTS</h2>
-        <p>Licensed construction Superintendent</p>
-        <img src="images/service1.webp" alt="service1">
-        <button data-target="#service1-details" class="services__button" onclick="showDetails('service1')">Get
-          Started</button>
-      </div>
-    </div>
-    <div class="details" id="service1-details">
-      <div class="cards-container">
-        <div class="card-one">
-          <h3>Step 1: Let us know about your project</h3>
-          <p>Fill out the Contact Us form with information about your company, contact details, project location, and
-            desired
-            superintendent start date.</p>
-        </div>
-        <div class="card-two">
-          <h3>Step 2: Receive price information</h3>
-          <p>We will contact you with pricing information based on your project details.</p>
-        </div>
-        <div class="card-three">
-          <h3>Step 3: Sign the contract</h3>
-          <p>Review and sign the contract.</p>
-        </div>
-        <div class="card-four">
-          <h3>Step 4: Done!</h3>
-          <p>Your superintendent will start work on your project on the agreed start date.</p>
-          <a href="#contact">
-            Contact Us
-          </a>
-          <button class="close-btn" onclick="showDetails('service1')">Close</button>
+    <h2 class="sub-title">FREE FORMS</h2>
+    <div class="cards">
+      <div class="card">
+        <img class="card-image" src="images/daily_log_book.jpg" alt="daily-log" onclick="openModal()">
+        <div class="card-content">
+          <h3 class="card-title">Daily Log Book</h3>
+          <button class="download-button">Download</button>
         </div>
       </div>
-    </div>
-    <div class="services__container">
-      <div class="services__card">
-        <h2>REMOTE SUPPORT</h2>
-        <p>Pre-Inspection</p>
-        <img src="images/service2.jpg" alt="service2">
-        <button data-target="#service2-details" class="services__button" onclick="showDetails('service2')">Get
-          Started</button>
+      <div class="card">
+        <img class="card-image" src="images/superintendent_log.jpg" alt="super-log">
+        <div class="card-content">
+          <h3 class="card-title">Superintendent Log</h3>
+          <button class="download-button">Download</button>
+        </div>
       </div>
-    </div>
-    <div class="details" id="service2-details">
-      <div class="cards-container">
-        <div class="card-one">
-          <h3>Step 1: Request</h3>
-          <p>Let us know what inspection you prepare for.</p>
+      <div class="card"><img class="card-image" src="images/preshift-safety.jpg" alt="pre-shift">
+        <div class="card-content">
+          <h3 class="card-title">Pre-Shift Safety</h3>
+          <button class="download-button">Download</button>
         </div>
-        <div class="card-two">
-          <h3>Step 2: Contract</h3>
-          <p>We will contact you with pricing information based on your project details.</p>
+      </div>
+      <div class="card"><img class="card-image" src="images/toolbox-talk.jpg" alt="toolbox">
+        <div class="card-content">
+          <h3 class="card-title">Toolbox Talk Form</h3>
+          <button class="download-button">Download</button>
         </div>
-        <div class="card-three">
-          <h3>Step 3: Details</h3>
-          <p>Send us detailed information with pictures.</p>
-        </div>
-        <div class="card-four">
-          <h3>Step 4: Done!</h3>
-          <p>Our Experts will analyze and help you for the issue.</p>
-          <a href="#contact">
-            Contact Us
-          </a>
-          <button class="close-btn" data-target="#service2-details" onclick="showDetails('service2')">Close</button>
+      </div>
+      <div class="modal" id="modal-preview">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="" alt="preview-image" class="modal-content" id="modal-image">
         </div>
       </div>
     </div>
-    <div class="services__container">
-      <div class="services__card">
-        <h2>TRAINING</h2>
-        <p>OSHA, CHST</p>
-        <img src="images/service3.jpeg" alt="service3" id="service3-img">
-        <button data-target="#service3-details" class="services__button" onclick="showDetails('service3')">Get
-          Started</button>
-      </div>
-    </div>
-    <div class="details" id="service3-details">
-      <div class="cards-container">
-        <div class="card-one">
-          <h3>Licensing</h3>
-          <p>Looking to become a licensed construction superintendent? We can help!</p>
-          <a href="#contact">
-            Contact Us
-          </a>
+    <h2 class="sub-title">SEE WHAT WE OFFER</h2>
+    <div class="cards">
+      <div class="card-service">
+        <img class="card-image" src="images/staffing.jpg" alt="staffing">
+        <div class="card-content">
+          <h3 class="card-title">Superintendent</h3>
+          <h3 class="card-title">Site Safety Plan</h3>
+          <h3 class="card-title">OSHA Training</h3>
+          <a href="#contact" class="service-button">Get a Quote</a>
         </div>
-        <div class="card-two">
-          <h3>Training</h3>
-          <p>Site Safety Plan / SST Card / OSHA Training</p>
-          <a href="#contact">
-            Contact Us
-          </a>
-          <button class="close-btn" data-target="#service3-details" onclick="showDetails('service3')">Close</button>
+      </div>
+      <div class="card-service">
+        <img class="card-image" src="images/admin.jpg" alt="admin">
+        <div class="card-content">
+          <h3 class="card-title">Bookkeeping</h3>
+          <h3 class="card-title">Accounting</h3>
+          <h3 class="card-title">Tax Audit Prep</h3>
+          <a href="#contact" class="service-button">Need Help?</a>
+        </div>
+      </div>
+      <div class="card-service"><img class="card-image" src="images/gc.jpg" alt="general contractor">
+        <div class="card-content">
+          <h3 class="card-title">Find the right general contractor for you</h3>
+          <a href="#contact" class="service-button">Contact Us</a>
+
+        </div>
+      </div>
+      <div class="card-service"><img class="card-image" src="images/subcontractor.jpg" alt="toolbox">
+        <div class="card-content">
+          <h3 class="card-title">Looking for Subcontractors?</h3>
+          <a href="#contact" class="service-button">Contact Us</a>
+        </div>
+      </div>
+      <div class="modal" id="modal-preview">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="" alt="preview-image" class="modal-content" id="modal-image">
         </div>
       </div>
     </div>
   </div>
-
   <!-- ContactUs -->
-  <div class="contact-form" id="contact">
-    <h1>CONTACT US</h1>
+  <h2 class="sub-title" id="contact">CONTACT US</h2>
+  <div class="contact-form">
     <form id="contact-form" action="https://formsubmit.co/coding4je@email.com" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" class="contact_input" name="from_name" placeholder="Name" required>
@@ -224,22 +182,28 @@
           services. We take your privacy seriously and strive to protect your information.
         </p>
         <p>
-          When you use our services, we may collect information such as your name, email address, and other relevant
-          information that you provide to us. We may also collect information about how you use our services, such as
+          When you use our services, we may collect information such as your name, email address, and other
+          relevant
+          information that you provide to us. We may also collect information about how you use our services, such
+          as
           your browser type, device type, IP address, and other usage data.
         </p>
         <p>
-          We use this information to improve our services, to communicate with you, to personalize your experience, and
-          to fulfill any requests or orders that you make through our services. We may also use this information to
+          We use this information to improve our services, to communicate with you, to personalize your
+          experience, and
+          to fulfill any requests or orders that you make through our services. We may also use this information
+          to
           comply with legal obligations or to prevent fraud or other illegal activities.
         </p>
         <p>
-          We may share your information with trusted third-party service providers who help us to provide our services,
+          We may share your information with trusted third-party service providers who help us to provide our
+          services,
           such as payment processors or email service providers. We require these providers to maintain the
           confidentiality and security of your information.
         </p>
         <p>
-          We do not sell or rent your personal information to any third parties. We may share your information in other
+          We do not sell or rent your personal information to any third parties. We may share your information in
+          other
           limited circumstances, such as when required by law or to protect our legal rights.
         </p>
         <p>
@@ -248,7 +212,8 @@
           information.
         </p>
         <p>
-          If you have any questions or concerns about our privacy policy, please contact us. We may update our policy
+          If you have any questions or concerns about our privacy policy, please contact us. We may update our
+          policy
           from time to time, and we will post any updates on this page.
         </p>
       </div>
@@ -259,12 +224,15 @@
         <h3>Terms of Service</h3>
         <ul>
           <li>Service Description
-            The Company provides licensed construction superintendent services and other related services such as online
-            consulting and training. The User may access and use our website and services solely for lawful purposes and
+            The Company provides licensed construction superintendent services and other related services such as
+            online
+            consulting and training. The User may access and use our website and services solely for lawful
+            purposes and
             in accordance with this Agreement.</li>
           <li>
             User Registration
-            The User must provide accurate and complete information in the registration process. The User is responsible
+            The User must provide accurate and complete information in the registration process. The User is
+            responsible
             for maintaining the confidentiality of their account and password and for restricting access to their
             account. The User agrees to accept responsibility for all activities that occur under their account or
             password.
@@ -276,8 +244,10 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h3>Accessibility</h3>
-        <p>We are committed to providing a website that is accessible to everyone, regardless of technology or ability.
-          Our website has been designed with accessibility in mind and we are continually making improvements to ensure
+        <p>We are committed to providing a website that is accessible to everyone, regardless of technology or
+          ability.
+          Our website has been designed with accessibility in mind and we are continually making improvements to
+          ensure
           that it meets the requirements of all users.</p>
 
         <h2>Accessibility Features</h2>
@@ -302,13 +272,18 @@
         <span class="close">&times;</span>
         <h3>COPYRIGHT AND TRADEMARK NOTICE:
         </h3>
-        <p>All content and materials available on this website, including but not limited to text, graphics, website
-          name, code, images, and logos are the intellectual property of BuildSafe Superintendent, and are protected by
-          applicable copyright and trademark law. Any inappropriate use, including but not limited to the reproduction,
-          distribution, display or transmission of any content on this site is strictly prohibited, unless specifically
+        <p>All content and materials available on this website, including but not limited to text, graphics,
+          website
+          name, code, images, and logos are the intellectual property of BuildSafe Superintendent, and are
+          protected by
+          applicable copyright and trademark law. Any inappropriate use, including but not limited to the
+          reproduction,
+          distribution, display or transmission of any content on this site is strictly prohibited, unless
+          specifically
           authorized by BuildSafe Superintendent.</p>
         <p>BuildSafe Superintendent is a registered trademark of BuildSafe Superintendent. All other trademarks,
-          service marks, and trade names used in the site are the trademarks, service marks, or trade names of their
+          service marks, and trade names used in the site are the trademarks, service marks, or trade names of
+          their
           respective owners, and no suggestion or advice from any party may be inferred from any such use.
         </p>
       </div>
@@ -317,20 +292,27 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h3>Disclosure:</h3>
-        <p>The information provided on this website is for general information purposes only. While we strive to keep
+        <p>The information provided on this website is for general information purposes only. While we strive to
+          keep
           the information up-to-date and correct, we make no representations or warranties of any kind, express or
           implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the
-          website or the information, products, services, or related graphics contained on the website for any purpose.
+          website or the information, products, services, or related graphics contained on the website for any
+          purpose.
           Any reliance you place on such information is therefore strictly at your own risk.</p>
-        <p>In no event will we be liable for any loss or damage, including without limitation, indirect or consequential
-          loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in
+        <p>In no event will we be liable for any loss or damage, including without limitation, indirect or
+          consequential
+          loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or
+          in
           connection with, the use of this website.
         </p>
-        <p>Through this website, you may be able to link to other websites that are not under our control. We have no
+        <p>Through this website, you may be able to link to other websites that are not under our control. We have
+          no
           control over the nature, content, and availability of those sites. The inclusion of any links does not
           necessarily imply a recommendation or endorse the views expressed within them.</p>
-        <p>Every effort is made to keep the website up and running smoothly. However, we take no responsibility for, and
-          will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+        <p>Every effort is made to keep the website up and running smoothly. However, we take no responsibility
+          for, and
+          will not be liable for, the website being temporarily unavailable due to technical issues beyond our
+          control.
         </p>
       </div>
     </div>
@@ -349,9 +331,7 @@
         </div> -->
       </div>
     </div>
-    <!-- </div>
   </div>
-  </div> -->
 </body>
 
 </html>

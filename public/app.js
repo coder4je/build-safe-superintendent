@@ -1,20 +1,3 @@
-// Menu Links
-const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".navbar__menu");
-const menuLinksList = menuLinks.querySelectorAll("a");
-
-menu.addEventListener("click", function () {
-  menu.classList.toggle("is-active");
-  menuLinks.classList.toggle("active");
-});
-
-menuLinksList.forEach(function (menuLink) {
-  menuLink.addEventListener("click", function () {
-    menu.classList.remove("is-active");
-    menuLinks.classList.remove("active");
-  });
-});
-
 // EmailJS
 const btn = document.getElementById("button");
 
@@ -66,22 +49,6 @@ phoneInput.addEventListener("input", function (event) {
   event.target.value = formattedInput;
 });
 
-// Service Details
-
-function showDetails(serviceId) {
-  const details = document.getElementById(`${serviceId}-details`);
-  const closeBtn = document.querySelector(".close-btn");
-  closeBtn.addEventListener("click", () => {
-    details.style.maxHeight = null;
-  });
-
-  if (details.style.maxHeight) {
-    details.style.maxHeight = null;
-  } else {
-    details.style.maxHeight = `${details.scrollHeight}px`;
-  }
-}
-
 // Get the modal and the link that opens it
 
 const modalButtons = document.querySelectorAll(".modal-button");
@@ -101,5 +68,42 @@ modalButtons.forEach((button) => {
         modal.style.display = "none";
       }
     });
+  });
+});
+
+// Preview images by clicking on them
+
+const clickableImages = document.querySelectorAll(".card-image");
+const modalPreview = document.getElementById("modal-preview");
+const modalImage = document.getElementById("modal-image");
+function openModal() {
+  clickableImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      modalImage.src = this.src; // Set the modal image source
+      modalPreview.style.display = "flex"; // Display the modal
+    });
+  });
+}
+// Function to close the modal
+function closeModal() {
+  var modal = document.getElementById("modal-preview");
+  modal.style.display = "none";
+}
+
+// Download the image
+const downloadButtons = document.querySelectorAll(".download-button");
+
+downloadButtons.forEach((button) => {
+  console.log(button);
+  button.addEventListener("click", function () {
+    const card = this.closest(".card");
+    const image = card.querySelector("img");
+
+    const link = document.createElement("a");
+    link.href = image.src;
+    link.download = image.src.split("/").pop(); // Get the image file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 });
