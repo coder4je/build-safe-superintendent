@@ -84,6 +84,7 @@ function openModal() {
     });
   });
 }
+
 // Function to close the modal
 function closeModal() {
   var modal = document.getElementById("modal-preview");
@@ -91,12 +92,12 @@ function closeModal() {
 }
 
 // Download the image
-const downloadButtons = document.querySelectorAll(".download-button");
+const downloadButtons = document.querySelectorAll("#download-button");
 
 downloadButtons.forEach((button) => {
   console.log(button);
   button.addEventListener("click", function () {
-    const card = this.closest(".card");
+    const card = this.closest(".service-card2");
     const image = card.querySelector("img");
 
     const link = document.createElement("a");
@@ -107,3 +108,9 @@ downloadButtons.forEach((button) => {
     document.body.removeChild(link);
   });
 });
+
+// Button to scroll to the Contact Us
+function scrollToContact() {
+  const contactSection = document.getElementById("contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}

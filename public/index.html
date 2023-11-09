@@ -33,8 +33,15 @@
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.ico/android-chrome-512x512.png">
 
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/e655d06e26.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -56,289 +63,320 @@
 
   <!-- Hero Section -->
   <div class="main__content">
-    <h1>CONSTRUCTION SUPERINTENDENT</h1>
-    <h2>STAFFING & CONSULTING</h2>
-    <p>Trust us to keep your construction sites safe and compliant</p>
-  </div>
+    <div class="main__wrapper">
+      <h1>Construction Superintendent</h1>
+      <h1>Staffing & Consulting</h1>
+      <p class="main-paragraph">Trust us to keep your construction sites safe and compliant</p>
+      <button onclick="scrollToContact()" class="button-main">
+        Get a Quote</button>
+    </div>
+    <img class="main__img" src="images/main.webp" alt="main-image">
+    <div class="review-wrapper">
+      <div class="review-box">
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <p class="review-content">"Their hands-on services were very helpful!"</p>
+      </div>
+      <div class="review-box">
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <p class="review-content">"The dedicated superintendent was extremely reliable."</p>
+      </div>
+      <div class="review-box">
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <span class="material-symbols-outlined">
+          grade
+        </span>
+        <p class="review-content">"Excellent response and follow-up for our requests."</p>
+      </div>
+    </div>
+    <div class="divider"></div>
 
-  <!-- Services Section -->
-  <div class="services" id="services">
-    <h2 class="sub-title">FREE FORMS</h2>
-    <div class="cards">
-      <div class="card">
-        <img class="card-image" src="images/daily_log_book.jpg" alt="daily-log" onclick="openModal()">
-        <div class="card-content">
-          <h3 class="card-title">Daily Log Book</h3>
-          <button class="download-button">Download</button>
+    <!-- Services Section -->
+    <div class="services" id="services">
+
+      <h2 class="sub-title">SEE WHAT WE OFFER</h2>
+      <div class="service-wrapper">
+        <div class="service-card">
+          <h2>Licensed Superintendents</h2>
+          <ol>
+            <li>Daily Inspection</li>
+            <li>Maintain the daily log books</li>
+            <li>Detailed reports</li>
+            <li>Effective communication</li>
+          </ol>
+          <button onclick="scrollToContact()" class="button-main">
+            Contact Us</button>
+        </div>
+        <div class="service-card">
+          <h2>Other Services</h2>
+          <ol>
+            <li>OSHA & SST Trainings</li>
+            <li>Site Safety Plan</li>
+          </ol>
+          <button onclick="scrollToContact()" class="button-main">
+            Contact Us</button>
         </div>
       </div>
-      <div class="card">
-        <img class="card-image" src="images/superintendent_log.jpg" alt="super-log">
-        <div class="card-content">
-          <h3 class="card-title">Superintendent Log</h3>
-          <button class="download-button">Download</button>
+
+      <h2 class="sub-title">FREE FORMS</h2>
+      <div class="service-wrapper">
+        <div class="service-card2">
+          <img class="card-image" src="images/Daily-Log-Book_JPEG.webp" alt="daily-log" onclick="openModal()">
+          <div class="card-content">
+            <h3 class="card-title">Daily Log Book</h3>
+            <button id="download-button" class="button-main">Download</button>
+          </div>
         </div>
-      </div>
-      <div class="card"><img class="card-image" src="images/preshift-safety.jpg" alt="pre-shift">
-        <div class="card-content">
-          <h3 class="card-title">Pre-Shift Safety</h3>
-          <button class="download-button">Download</button>
+        <div class="service-card2">
+          <img class="card-image" src="images/SUPERINTENDENT-OF-CONSTRUCTION-DAILY-LOG_JPEG.webp" alt="super-log">
+          <div class="card-content">
+            <h3 class="card-title">Superintendent Log</h3>
+            <button id="download-button" class="button-main">Download</button>
+          </div>
         </div>
-      </div>
-      <div class="card"><img class="card-image" src="images/toolbox-talk.jpg" alt="toolbox">
-        <div class="card-content">
-          <h3 class="card-title">Toolbox Talk Form</h3>
-          <button class="download-button">Download</button>
+        <div class="service-card2"><img class="card-image" src="images/Pre-shift-Safety-Meeting_JPEG.webp"
+            alt="pre-shift">
+          <div class="card-content">
+            <h3 class="card-title">Pre-Shift Safety</h3>
+            <button id="download-button" class="button-main">Download</button>
+          </div>
         </div>
-      </div>
-      <div class="modal" id="modal-preview">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <img src="" alt="preview-image" class="modal-content" id="modal-image">
+        <div class="service-card2"><img class="card-image" src="images/Toolbox-Talk-Form_JPEG.webp" alt="toolbox">
+          <div class="card-content">
+            <h3 class="card-title">Toolbox Talk Form</h3>
+            <button id="download-button" class="button-main">Download</button>
+          </div>
+        </div>
+        <div class="modal" id="modal-preview">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="" alt="preview-image" class="modal-content" id="modal-image">
+          </div>
         </div>
       </div>
     </div>
-    <h2 class="sub-title">SEE WHAT WE OFFER</h2>
-    <div class="cards">
-      <div class="card-service">
-        <img class="card-image" src="images/staffing.jpg" alt="staffing">
-        <div class="card-content">
-          <h3 class="card-title">Superintendent</h3>
-          <h3 class="card-title">Site Safety Plan</h3>
-          <h3 class="card-title">OSHA Training</h3>
-          <a href="#contact" class="service-button">Get a Quote</a>
-        </div>
-      </div>
-      <div class="card-service">
-        <img class="card-image" src="images/admin.jpg" alt="admin">
-        <div class="card-content">
-          <h3 class="card-title">Bookkeeping</h3>
-          <h3 class="card-title">Accounting</h3>
-          <h3 class="card-title">Tax Audit Prep</h3>
-          <a href="#contact" class="service-button">Need Help?</a>
-        </div>
-      </div>
-      <div class="card-service"><img class="card-image" src="images/gc.jpg" alt="general contractor">
-        <div class="card-content">
-          <h3 class="card-title">Find the right general contractor for you</h3>
-          <a href="#contact" class="service-button">Contact Us</a>
-
-        </div>
-      </div>
-      <div class="card-service"><img class="card-image" src="images/subcontractor.jpg" alt="toolbox">
-        <div class="card-content">
-          <h3 class="card-title">Looking for Subcontractors?</h3>
-          <a href="#contact" class="service-button">Contact Us</a>
-        </div>
-      </div>
-      <div class="modal" id="modal-preview">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <img src="" alt="preview-image" class="modal-content" id="modal-image">
-        </div>
-      </div>
+    <!-- ContactUs -->
+    <h2 class="sub-title" id="contact">CONTACT US</h2>
+    <div class="contact-form">
+      <form id="contact-form" action="https://formsubmit.co/coding4je@email.com" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="contact_input" name="from_name" placeholder="Name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" class="contact_input" name="user_email" placeholder="Email" required>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" class="contact_input" name="user_phone" placeholder="123-456-7890"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <label for="address">Project Address</label>
+        <input type="text" id='address' class="contact_input" name="address" placeholder="Enter project address">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Message" required></textarea>
+        <input class="button-main" type="submit" id='button' value="Send Email">
+      </form>
     </div>
-  </div>
-  <!-- ContactUs -->
-  <h2 class="sub-title" id="contact">CONTACT US</h2>
-  <div class="contact-form">
-    <form id="contact-form" action="https://formsubmit.co/coding4je@email.com" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" class="contact_input" name="from_name" placeholder="Name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" class="contact_input" name="user_email" placeholder="Email" required>
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" class="contact_input" name="user_phone" placeholder="123-456-7890"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-      <label for="address">Project Address</label>
-      <input type="text" id='address' class="contact_input" name="address" placeholder="Enter project address">
-      <label for="message">Message</label>
-      <textarea name="message" id="message" placeholder="Message" required></textarea>
-      <input class="contact_btn" type="submit" id='button' value="Send Email">
-    </form>
-  </div>
 
-  <!-- Footer Section -->
-  <div class="footer__container">
-    <div class="footer_links">
-      <div class="footer__link--wrapper">
-        <div class="footer__link--items">
-          <h2>About Us</h2>
-          <a href="#" class="modal-button" id="privacy-policy">Privacy Policy</a>
-          <a href="#" class="modal-button" id="terms-of-service">Terms of Service</a>
-          <a href="#" class="modal-button" id="accessibility">Accessibility</a>
-          <a href="#" class="modal-button" id="copyright-and-trademark">Copyright and Trademark</a>
-          <a href="#" class="modal-button" id="disclosure">Disclosure</a>
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer_links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <a href="#" class="modal-button" id="privacy-policy">Privacy Policy</a>
+            <a href="#" class="modal-button" id="terms-of-service">Terms of Service</a>
+            <a href="#" class="modal-button" id="accessibility">Accessibility</a>
+            <a href="#" class="modal-button" id="copyright-and-trademark">Copyright and Trademark</a>
+            <a href="#" class="modal-button" id="disclosure">Disclosure</a>
+          </div>
         </div>
-        <!-- <div class="footer__link--items">
+      </div>
+      <div class="modal" id="privacy-policy-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Privacy Policy</h3>
+          <p>
+            Our privacy policy outlines how we collect, use, and protect your personal information when you use our
+            services. We take your privacy seriously and strive to protect your information.
+          </p>
+          <p>
+            When you use our services, we may collect information such as your name, email address, and other
+            relevant
+            information that you provide to us. We may also collect information about how you use our services, such
+            as
+            your browser type, device type, IP address, and other usage data.
+          </p>
+          <p>
+            We use this information to improve our services, to communicate with you, to personalize your
+            experience, and
+            to fulfill any requests or orders that you make through our services. We may also use this information
+            to
+            comply with legal obligations or to prevent fraud or other illegal activities.
+          </p>
+          <p>
+            We may share your information with trusted third-party service providers who help us to provide our
+            services,
+            such as payment processors or email service providers. We require these providers to maintain the
+            confidentiality and security of your information.
+          </p>
+          <p>
+            We do not sell or rent your personal information to any third parties. We may share your information in
+            other
+            limited circumstances, such as when required by law or to protect our legal rights.
+          </p>
+          <p>
+            We take reasonable measures to protect your personal information from unauthorized access or disclosure.
+            However, no security measures are completely foolproof, and we cannot guarantee the security of your
+            information.
+          </p>
+          <p>
+            If you have any questions or concerns about our privacy policy, please contact us. We may update our
+            policy
+            from time to time, and we will post any updates on this page.
+          </p>
+        </div>
+      </div>
+      <div class="modal" id="terms-of-service-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Terms of Service</h3>
+          <ul>
+            <li>Service Description
+              The Company provides licensed construction superintendent services and other related services such as
+              online
+              consulting and training. The User may access and use our website and services solely for lawful
+              purposes and
+              in accordance with this Agreement.</li>
+            <li>
+              User Registration
+              The User must provide accurate and complete information in the registration process. The User is
+              responsible
+              for maintaining the confidentiality of their account and password and for restricting access to their
+              account. The User agrees to accept responsibility for all activities that occur under their account or
+              password.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal" id="accessibility-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Accessibility</h3>
+          <p>We are committed to providing a website that is accessible to everyone, regardless of technology or
+            ability.
+            Our website has been designed with accessibility in mind and we are continually making improvements to
+            ensure
+            that it meets the requirements of all users.</p>
+
+          <h2>Accessibility Features</h2>
+          <ul>
+            <li>Alternative text for all images and multimedia content</li>
+            <li>Keyboard navigation support</li>
+            <li>Resizable text using the browser's zoom functionality</li>
+            <li>High contrast color schemes for better readability</li>
+            <li>Compatibility with screen reader software</li>
+          </ul>
+
           <h2>Contact Us</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div> -->
-      </div>
-    </div>
-    <div class="modal" id="privacy-policy-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Privacy Policy</h3>
-        <p>
-          Our privacy policy outlines how we collect, use, and protect your personal information when you use our
-          services. We take your privacy seriously and strive to protect your information.
-        </p>
-        <p>
-          When you use our services, we may collect information such as your name, email address, and other
-          relevant
-          information that you provide to us. We may also collect information about how you use our services, such
-          as
-          your browser type, device type, IP address, and other usage data.
-        </p>
-        <p>
-          We use this information to improve our services, to communicate with you, to personalize your
-          experience, and
-          to fulfill any requests or orders that you make through our services. We may also use this information
-          to
-          comply with legal obligations or to prevent fraud or other illegal activities.
-        </p>
-        <p>
-          We may share your information with trusted third-party service providers who help us to provide our
-          services,
-          such as payment processors or email service providers. We require these providers to maintain the
-          confidentiality and security of your information.
-        </p>
-        <p>
-          We do not sell or rent your personal information to any third parties. We may share your information in
-          other
-          limited circumstances, such as when required by law or to protect our legal rights.
-        </p>
-        <p>
-          We take reasonable measures to protect your personal information from unauthorized access or disclosure.
-          However, no security measures are completely foolproof, and we cannot guarantee the security of your
-          information.
-        </p>
-        <p>
-          If you have any questions or concerns about our privacy policy, please contact us. We may update our
-          policy
-          from time to time, and we will post any updates on this page.
-        </p>
-      </div>
-    </div>
-    <div class="modal" id="terms-of-service-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Terms of Service</h3>
-        <ul>
-          <li>Service Description
-            The Company provides licensed construction superintendent services and other related services such as
-            online
-            consulting and training. The User may access and use our website and services solely for lawful
-            purposes and
-            in accordance with this Agreement.</li>
-          <li>
-            User Registration
-            The User must provide accurate and complete information in the registration process. The User is
-            responsible
-            for maintaining the confidentiality of their account and password and for restricting access to their
-            account. The User agrees to accept responsibility for all activities that occur under their account or
-            password.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="modal" id="accessibility-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Accessibility</h3>
-        <p>We are committed to providing a website that is accessible to everyone, regardless of technology or
-          ability.
-          Our website has been designed with accessibility in mind and we are continually making improvements to
-          ensure
-          that it meets the requirements of all users.</p>
-
-        <h2>Accessibility Features</h2>
-        <ul>
-          <li>Alternative text for all images and multimedia content</li>
-          <li>Keyboard navigation support</li>
-          <li>Resizable text using the browser's zoom functionality</li>
-          <li>High contrast color schemes for better readability</li>
-          <li>Compatibility with screen reader software</li>
-        </ul>
-
-        <h2>Contact Us</h2>
-        <p>If you have any accessibility-related questions or concerns, please contact us:</p>
-        <ul>
-          <li>Email: info@buildsafesuperintendent.com</li>
-          <li>Phone: 917-750-4421</li>
-        </ul>
-      </div>
-    </div>
-    <div class="modal" id="copyright-and-trademark-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>COPYRIGHT AND TRADEMARK NOTICE:
-        </h3>
-        <p>All content and materials available on this website, including but not limited to text, graphics,
-          website
-          name, code, images, and logos are the intellectual property of BuildSafe Superintendent, and are
-          protected by
-          applicable copyright and trademark law. Any inappropriate use, including but not limited to the
-          reproduction,
-          distribution, display or transmission of any content on this site is strictly prohibited, unless
-          specifically
-          authorized by BuildSafe Superintendent.</p>
-        <p>BuildSafe Superintendent is a registered trademark of BuildSafe Superintendent. All other trademarks,
-          service marks, and trade names used in the site are the trademarks, service marks, or trade names of
-          their
-          respective owners, and no suggestion or advice from any party may be inferred from any such use.
-        </p>
-      </div>
-    </div>
-    <div class="modal" id="disclosure-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Disclosure:</h3>
-        <p>The information provided on this website is for general information purposes only. While we strive to
-          keep
-          the information up-to-date and correct, we make no representations or warranties of any kind, express or
-          implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the
-          website or the information, products, services, or related graphics contained on the website for any
-          purpose.
-          Any reliance you place on such information is therefore strictly at your own risk.</p>
-        <p>In no event will we be liable for any loss or damage, including without limitation, indirect or
-          consequential
-          loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or
-          in
-          connection with, the use of this website.
-        </p>
-        <p>Through this website, you may be able to link to other websites that are not under our control. We have
-          no
-          control over the nature, content, and availability of those sites. The inclusion of any links does not
-          necessarily imply a recommendation or endorse the views expressed within them.</p>
-        <p>Every effort is made to keep the website up and running smoothly. However, we take no responsibility
-          for, and
-          will not be liable for, the website being temporarily unavailable due to technical issues beyond our
-          control.
-        </p>
-      </div>
-    </div>
-    <div class="social__media">
-      <div class="social__media--wrap">
-        <div class="footer__logo">
-          <a href="./" id="footer__logo">BuildSafe</i></a>
+          <p>If you have any accessibility-related questions or concerns, please contact us:</p>
+          <ul>
+            <li>info@<!-- Email address: --> buildsafesuperintendent.com </li>
+            <li>Phone: 929-556-0230</li>
+          </ul>
         </div>
-        <p class="website__right">BuildSafe 2023, All rights reserved</p>
-        <!-- <div class="social__icons">
-          <a href="/" class="social__icon--link"><i class="fa-brands fa-facebook"></i></a>
-          <a href="/" class="social__icon--link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="/" class="social__icon--link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="/" class="social__icon--link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="/" class="social__icon--link"><i class="fa-brands fa-youtube"></i></a>
-        </div> -->
+      </div>
+      <div class="modal" id="copyright-and-trademark-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>COPYRIGHT AND TRADEMARK NOTICE:
+          </h3>
+          <p>All content and materials available on this website, including but not limited to text, graphics,
+            website
+            name, code, images, and logos are the intellectual property of BuildSafe Superintendent, and are
+            protected by
+            applicable copyright and trademark law. Any inappropriate use, including but not limited to the
+            reproduction,
+            distribution, display or transmission of any content on this site is strictly prohibited, unless
+            specifically
+            authorized by BuildSafe Superintendent.</p>
+          <p>BuildSafe Superintendent is a registered trademark of BuildSafe Superintendent. All other trademarks,
+            service marks, and trade names used in the site are the trademarks, service marks, or trade names of
+            their
+            respective owners, and no suggestion or advice from any party may be inferred from any such use.
+          </p>
+        </div>
+      </div>
+      <div class="modal" id="disclosure-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Disclosure:</h3>
+          <p>The information provided on this website is for general information purposes only. While we strive to
+            keep
+            the information up-to-date and correct, we make no representations or warranties of any kind, express or
+            implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the
+            website or the information, products, services, or related graphics contained on the website for any
+            purpose.
+            Any reliance you place on such information is therefore strictly at your own risk.</p>
+          <p>In no event will we be liable for any loss or damage, including without limitation, indirect or
+            consequential
+            loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or
+            in
+            connection with, the use of this website.
+          </p>
+          <p>Through this website, you may be able to link to other websites that are not under our control. We have
+            no
+            control over the nature, content, and availability of those sites. The inclusion of any links does not
+            necessarily imply a recommendation or endorse the views expressed within them.</p>
+          <p>Every effort is made to keep the website up and running smoothly. However, we take no responsibility
+            for, and
+            will not be liable for, the website being temporarily unavailable due to technical issues beyond our
+            control.
+          </p>
+        </div>
+      </div>
+      <div class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="./" id="footer__logo">BuildSafe</i></a>
+          </div>
+          <p class="website__right">BuildSafe 2023, All rights reserved</p>
+        </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
