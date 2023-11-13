@@ -92,7 +92,7 @@ function closeModal() {
 }
 
 // Download the image
-const downloadButtons = document.querySelectorAll("#download-button");
+const downloadButtons = document.querySelectorAll(".download-button");
 
 downloadButtons.forEach((button) => {
   console.log(button);
