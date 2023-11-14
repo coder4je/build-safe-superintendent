@@ -95,11 +95,9 @@ function closeModal() {
 const downloadButtons = document.querySelectorAll(".download-button");
 
 downloadButtons.forEach((button) => {
-  console.log(button);
   button.addEventListener("click", function () {
     const card = this.closest(".service-card2");
     const image = card.querySelector("img");
-
     const link = document.createElement("a");
     link.href = image.src;
     link.download = image.src.split("/").pop(); // Get the image file name

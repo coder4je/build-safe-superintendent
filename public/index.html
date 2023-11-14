@@ -32,20 +32,21 @@
   <link rel="icon" type="image/png" sizes="192x192" href="favicon.ico/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.ico/android-chrome-512x512.png">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" defer>
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" defer>
 
   <script defer src="https://kit.fontawesome.com/e655d06e26.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    defer />
   <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <script type="text/javascript">
+  <script defer type="text/javascript">
     emailjs.init('u0yN2UGu-s7bjaR6M')
   </script>
   <!-- <script type="text/javascript" id="hs-script-loader" async defer
@@ -71,7 +72,12 @@
       <button onclick="scrollToContact()" class="button-main">
         Get a Quote</button>
     </div>
-    <img class="main__img" src="images/main.webp" alt="main-image">
+    <img class="main__img" src="images/main-3024x4032.webp" alt="main-image" srcset="
+      images/main-400x533.webp 400w,
+      images/main-800x1067.webp 1000w, 
+      images/main-1200x1600.webp 1600w, 
+      images/main-3024x4032.webp 3000w, 
+      " sizes="(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1000px">
     <div class="review-wrapper">
       <div class="review-box">
         <span class="material-symbols-outlined">
@@ -160,7 +166,9 @@
       <h2 class="sub-title">FREE FORMS</h2>
       <div class="service-wrapper">
         <div class="service-card2">
-          <img class="card-image" src="images/Daily-Log-Book_JPEG.webp" alt="daily-log" onclick="openModal()">
+          <img class="card-image" src="images/Daily-Log-Book_JPEG-612.webp" alt="daily-log" srcset="
+            images/Daily-Log-Book_JPEG-400.webp 400w, 
+            images/Daily-Log-Book_JPEG-612.webp 800w" onclick="openModal()">
           <div class="card-content">
             <h3 class="card-title">Daily Log Book</h3>
             <button class="button-main 
@@ -168,20 +176,26 @@
           </div>
         </div>
         <div class="service-card2">
-          <img class="card-image" src="images/SUPERINTENDENT-OF-CONSTRUCTION-DAILY-LOG_JPEG.webp" alt="super-log">
+          <img class="card-image" src="images/SUPERINTENDENT-OF-CONSTRUCTION-DAILY-LOG_JPEG-612.webp" alt="super-log"
+            srcset="
+          images/SUPERINTENDENT-OF-CONSTRUCTION-DAILY-LOG_JPEG-400.webp 400w,
+          images/SUPERINTENDENT-OF-CONSTRUCTION-DAILY-LOG_JPEG-612.webp 800w
+          ">
           <div class="card-content">
             <h3 class="card-title">Superintendent Log</h3>
             <button class="button-main download-button">Download</button>
           </div>
         </div>
-        <div class="service-card2"><img class="card-image" src="images/Pre-shift-Safety-Meeting_JPEG.webp"
-            alt="pre-shift">
+        <div class="service-card2"><img class="card-image" src="images/Pre-shift-Safety-Meeting_JPEG-612.webp"
+            alt="pre-shift"
+            srcset="images/Pre-shift-Safety-Meeting_JPEG-400.webp 400w, images/Pre-shift-Safety-Meeting_JPEG-612.webp 800w">
           <div class="card-content">
             <h3 class="card-title">Pre-Shift Safety</h3>
             <button class="button-main download-button">Download</button>
           </div>
         </div>
-        <div class="service-card2"><img class="card-image" src="images/Toolbox-Talk-Form_JPEG.webp" alt="toolbox">
+        <div class="service-card2"><img class="card-image" src="images/Toolbox-Talk-Form_JPEG-612.webp" alt="toolbox"
+            srcset="images/Toolbox-Talk-Form_JPEG-400.webp 400w, images/Toolbox-Talk-Form_JPEG-612.webp 800w">
           <div class="card-content">
             <h3 class="card-title">Toolbox Talk Form</h3>
             <button class="button-main download-button">Download</button>

@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  max-width: 80%;
+  max-width: 1030px;
+  width: 100%;
   margin: auto;
 }
 
@@ -87,7 +88,7 @@ body {
 
 .main__content {
   text-align: center;
-  margin-top: 5rem;
+  margin: 5px;
   height: 100%;
 }
 
@@ -147,7 +148,9 @@ body {
 }
 
 .main__img {
-  width: 80%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
   margin: 3rem auto;
   border-radius: 25px;
   box-shadow: 1px 1px 2px #79e6ff;
